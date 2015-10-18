@@ -1,6 +1,6 @@
 ## What is this?
 
-oh-irc-bot (or "WelcomeBot", its IRC nick) is a bot for welcoming people into the #openhatch irc channel when no one is paying attention.  It has two main goals: first, to alert community members when someone new enters the room and says hello (either by using their nick in a response, or by sending a private message).  Second, it helps the new person to feel welcome even when there's no one around, and provides more information to them about staying in touch.
+oh-irc-bot (or "WelcomeBot", its IRC nick) is a bot for welcoming people into the #privacybadger irc channel when no one is paying attention.  It has two main goals: first, to alert community members when someone new enters the room and says hello (either by using their nick in a response, or by sending a private message).  Second, it helps the new person to feel welcome even when there's no one around, and provides more information to them about staying in touch.
 
 ## Basic Structure
 
@@ -56,7 +56,7 @@ _Note_: You will likely need to install coverage.  The above command assumes you
 
 ## How to help
 
-The [issue tracker](https://github.com/shaunagm/oh-irc-bot/issues?state=open) lists improvements we want to make.  Tasks that are better for newcomers are labelled [first task](https://github.com/shaunagm/WelcomeBot/labels/first%20task).
+The [issue tracker](https://github.com/efforg/oh-irc-bot/issues?state=open) lists improvements we want to make.  Tasks that are better for newcomers are labelled [first task](https://github.com/efforg/WelcomeBot/labels/first%20task).
 
 I strongly encourage you to contact me and say hello before you get started (I am shauna on the #openhatch IRC).  Please feel free to submit pull requests to address these issues.  If you're not familiar with how to do this using github, see [here](https://openhatch.org/wiki/Git_Basics).  You can also always ask me for help or  clarification.  
 

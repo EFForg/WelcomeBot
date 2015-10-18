@@ -65,7 +65,7 @@ def irc_start(server): # pragma: no cover  (this excludes this function from tes
     return ircsock
 
 def join_irc(ircsock, botnick, channel):
-    ircsock.send("USER {0} {0} {0} :This is http://openhatch.org/'s greeter bot"
+    ircsock.send("USER {0} {0} {0} :This is privacy badger's greeter bot"
              ".\n".format(botnick))  # bot authentication
     ircsock.send("NICK {}\n".format(botnick))  # Assign the nick to the bot.
     if os.path.isfile("password.txt"):
@@ -103,7 +103,7 @@ def welcome_nick(newcomer, ircsock, channel, channel_greeters):
     ircsock.send("PRIVMSG {0} :Welcome {1}!  The channel is pretty quiet "
                  "right now, so I thought I'd say hello, and ping some people "
                  "(like {2}) that you're here.  If no one responds for a "
-                 "while, try emailing us at hello@openhatch.org or just try "
+                 "while, try emailing noah noah@eff.org or just try "
                  "coming back later.  FYI, you're now on my list of known "
                  "nicknames, so I won't bother you again."
                  "\n".format(channel, newcomer, greeter_string(channel_greeters)))
@@ -127,7 +127,7 @@ def parse_messages(ircmsg):
 # Cleans a nickname of decorators/identifiers
 def clean_nick(actor):
     if actor:   # In case an empty string gets passed
-        if actor.find("openhatch") != -1:  # If nick is like "openhatch_1234" don't clean.
+        if actor.find("guest") != -1:  # If nick is like "openhatch_1234" don't clean.
             return actor
         actor = actor.replace("_", "")  # Strip out trailing _ characters
         while(actor[-1]) in "1234567890": # Remove trailing numbers
@@ -188,8 +188,7 @@ def bot_hello(greeting, actor, ircsock, channel):
 # Explains what the bot is when queried.
 def bot_help(ircsock, channel):
     ircsock.send("PRIVMSG {} :I'm a bot!  I'm from here <https://github"
-                 ".com/shaunagm/oh-irc-bot>.  You can change my behavior by "
-                 "submitting a pull request or by talking to shauna"
+                 ".com/efforg/oh-irc-bot>."
                  ".\n".format(channel))
 
 # Returns a grammatically correct string of the channel_greeters.
