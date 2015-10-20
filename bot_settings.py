@@ -7,7 +7,7 @@ server = "irc.oftc.net"
 registered = False
 
 # Bot behavior
-wait_time = 60
+wait_time = 1
 channel_greeters = ["swartzcr", "pde", "cooperq"]
 nick_source = "nicks.csv"
 
